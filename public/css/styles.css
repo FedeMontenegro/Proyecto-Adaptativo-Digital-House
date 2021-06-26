@@ -1,0 +1,217 @@
+:root {
+    /* colores */
+    --color-rojo: #b92519;
+    --color-grisOscuro: #444444;
+    /* fuentes */
+    --font-roboto : "Roboto", sans-serif;
+    /* Tamaños de fuentes */
+    --paragraph : 12px;
+    --title : 24px;
+    --prices : 18px;
+    --discounts-descriptions :16px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+}
+/* GENERAL */
+* {
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+}
+/* HEADER */
+.main.header {
+    text-align: center;
+}
+
+.container .main-header .logo {
+    border-radius: 50%;/* 
+    margin: 10px 11px 10px; */
+    margin: 15px 40vw;
+}
+
+.main-header .toggle-nav {
+    background-color: var(--color-rojo);
+    display: block;
+    font-size: 30px;
+    margin:20px auto 15px auto;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    width: fit-content;
+    color: white;
+}
+
+/* .main-header .main-nav ul li */
+
+/* BODY */
+body {
+    background-image: url("/images/bg-body.png");
+    padding: 15px 10px 0 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main nav, ul .lista {
+    margin: 2px auto 2px auto;
+    background-color: var(--color-grisOscuro);
+    padding: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* BANNER */
+.banner {
+    display: none;
+}
+
+/* PRODUCTOS */
+
+.vip-products .product {
+    max-width: 380px;
+    padding-bottom: 10px;
+}
+
+.vip-products .product h2 {
+    margin: 15px 0;
+}
+
+.vip-products .product p {
+    color: var(--color-grisOscuro);
+}
+
+.vip-products .product a.more{
+    background-color: var(--color-grisOscuro);
+    display: block;
+    text-align: center;
+    width: 75px;
+    padding: 8px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+}
+
+.vip-products .product .photo-container{
+    position: relative;
+}
+
+.vip-products .product .photo-container .special{
+    position: absolute;
+    top: 0px;
+    right: 20px;
+}
+.vip-products .product .photo-container .zoom{
+    position: absolute;
+    top: 48%;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: inline-block;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.vip-products .product .photo-container img.photo{
+    width: 100%;
+}
+/* FOOTER */
+.main-footer ul li {
+    margin: 2px auto 2px auto;
+    background-color: var(--color-grisOscuro);
+    padding: 8px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* TABLET */
+@media (min-width : 769px) {
+    .banner {
+        display: block;
+        width: 100%;
+
+    }
+    .banner img {
+        width: 100%;
+    }
+
+    .vip-products .product {
+        display: inline-block;
+        width: 372px;
+    }
+
+    .main-header .toggle-nav {
+        display: none;
+    }
+
+    .main nav, ul .lista {
+        display: inline-block;
+        font-size: 12px;
+        width: 15.587%;
+        margin: 2.14px;
+    }
+
+    .main, nav{
+        margin-bottom: 20px;
+    }
+
+    
+}
+
+@media (min-width : 1280px) {
+    .banner {
+        width: 89.2%;
+        margin: 0 auto;
+    }
+    body {
+        text-align: center;
+    }
+
+    .container .main-header .logo {
+        border: solid 2px rgba(0,0,0,0.1)
+    }
+
+    .main-footer {
+        
+        background-color: var(--color-rojo);
+        font-size: 12px;
+        margin-left: 70px;
+        margin-right: 70px;
+        border: solid 10px var(--color-rojo);
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        
+        text-align: center;
+    }
+
+    .main-footer ul li{
+        background-color: var(--color-rojo);
+        border: solid 3px var(--color-rojo);
+        display: inline-block;
+        font-weight: bolder;
+        margin: 0;
+        padding: 4px;
+        padding-right: 10px;
+        
+    }
+
+    .main nav, ul .lista {
+        display: inline-block;
+        font-size: 12px;
+        width: 14.3%;
+        margin: 2.14px;
+    }
+    .main-footer ul li.border-white {
+        border-right-color: white;
+    }
+}
+
+/* nth-child */
