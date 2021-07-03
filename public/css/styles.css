@@ -1,14 +1,14 @@
+/* GENERAL */
+* {
+    box-sizing: border-box;
+    margin : 0 auto;
+    padding: 0;
+}
+
 :root {
     /* colores */
     --color-rojo: #b92519;
     --color-grisOscuro: #444444;
-    /* fuentes */
-    --font-roboto : "Roboto", sans-serif;
-    /* Tamaños de fuentes */
-    --paragraph : 12px;
-    --title : 24px;
-    --prices : 18px;
-    --discounts-descriptions :16px;
 }
 
 a{
@@ -19,37 +19,32 @@ a{
 ul {
     list-style: none;
 }
-/* GENERAL */
-* {
-    box-sizing: border-box;
-    margin : 0;
-    padding: 0;
-}
+
 /* HEADER */
-.main.header {
+.main-header {
+    max-width: 380px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main-header ul li {
     text-align: center;
 }
 
 .container .main-header .logo {
-    border-radius: 50%;/* 
-    margin: 10px 11px 10px; */
-    margin: 15px 40vw;
+    border-radius: 50%;
 }
 
 .main-header .toggle-nav {
-    background-color: var(--color-rojo);
+    background-color: var(--color-grisOscuro);
+    border-radius: 2px;
+    color: white;
     display: block;
     font-size: 30px;
-    margin:20px auto 15px auto;
-    padding: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 2px;
+    margin: 20px auto 15px auto;
+    padding: 5px;
     width: fit-content;
-    color: white;
 }
-
-/* .main-header .main-nav ul li */
 
 /* BODY */
 body {
@@ -59,10 +54,10 @@ body {
 }
 
 .main nav, ul .lista {
-    margin: 2px auto 2px auto;
     background-color: var(--color-grisOscuro);
-    padding: 8px;
-    text-align: center;
+    margin-bottom: 1px;
+    max-width: 380px;
+    padding: 5px;
     text-transform: uppercase;
 }
 
@@ -75,7 +70,7 @@ body {
 
 .vip-products .product {
     max-width: 380px;
-    padding-bottom: 10px;
+    padding-bottom: 25px;
 }
 
 .vip-products .product h2 {
@@ -89,11 +84,10 @@ body {
 .vip-products .product a.more{
     background-color: var(--color-grisOscuro);
     display: block;
+    margin: 13px 0 0 0;
+    padding: 7px;
     text-align: center;
-    width: 75px;
-    padding: 8px;
-    margin-bottom: 20px;
-    margin-top: 10px;
+    width: 95px;
     
 }
 
@@ -107,15 +101,14 @@ body {
     right: 20px;
 }
 .vip-products .product .photo-container .zoom{
-    position: absolute;
-    top: 48%;
-    left: 0;
     background-color: rgba(0,0,0,0.5);
-    display: inline-block;
+    left: 0;
     padding: 5px;
-    width: 100%;
+    position: absolute;
     text-align: center;
     text-transform: uppercase;
+    top: 48%;
+    width: 100%;
 }
 
 .vip-products .product .photo-container img.photo{
@@ -123,95 +116,123 @@ body {
 }
 /* FOOTER */
 .main-footer ul li {
-    margin: 2px auto 2px auto;
     background-color: var(--color-grisOscuro);
-    padding: 8px;
+    margin-bottom: 1px;
+    padding: 10px;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 /* TABLET */
-@media (min-width : 769px) {
-    .banner {
-        display: block;
-        width: 100%;
+@media (min-width : 768px) {
 
-    }
-    .banner img {
-        width: 100%;
-    }
-
-    .vip-products .product {
-        display: inline-block;
-        width: 372px;
-    }
-
+    /* HEADER */
     .main-header .toggle-nav {
         display: none;
     }
 
-    .main nav, ul .lista {
-        display: inline-block;
-        font-size: 12px;
-        width: 15.587%;
-        margin: 2.14px;
-    }
-
-    .main, nav{
-        margin-bottom: 20px;
-    }
-
-    
-}
-
-@media (min-width : 1280px) {
-    .banner {
-        width: 89.2%;
-        margin: 0 auto;
-    }
-    body {
+    .main-header{
+        max-width: 100%;
         text-align: center;
     }
 
-    .container .main-header .logo {
-        border: solid 2px rgba(0,0,0,0.1)
+    .main-header .main-nav {
+        margin: 20px 0;
     }
 
-    .main-footer {
-        
-        background-color: var(--color-rojo);
-        font-size: 12px;
-        margin-left: 70px;
-        margin-right: 70px;
-        border: solid 10px var(--color-rojo);
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-        padding-top: 30px;
+    .main-header .main-nav ul li {
+        display: inline-block;
+        font-size: 14px;
+        margin-bottom: 0px;
+        margin-right: 9.5px;
+        padding: 7px 7px;
+        width: 113px;
+    }
+
+    .main-header .main-nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    .banner {
+        display: block;
+        margin-bottom: 20px;
+        width: 100%;/* 
+        max-width: 775px; */
+    }
+
+    .banner img {
+        width: 100%;
+    }
+
+    .vip-products {
+        text-align: center;
+    }
+
+    .vip-products .product {
+        display: inline-block;
+        width: 371px;
+    }
+
+}
+
+@media (min-width : 1180px) {
+    .banner {
+        max-width: 1180px;
+    }
+    .container {
+        max-width: 1180px;
+    }
+
+    .main-header .logo {
+        width: 180px;
+    }
+
+    .main-header .main-nav {
+        margin: 30px 0 20px 0;
+    }
+
+    .main-header .main-nav ul li {/* 
+        border: solid 2px red; */
+        font-size: 16px;
+        margin-right: 11px;
+        padding: 7px 15px;
+        width: 180px;
+    }
+
+    .vip-products .product {
+        max-width: 380px;
+        margin-right: 15px;
         padding-bottom: 30px;
-        
+    }
+
+    .vip-products .product:nth-child(3n){
+        margin-right: 0;
+    }
+
+    /* Footer desktop */
+
+    .main-footer {
+        background-color: var(--color-rojo);
+        border-radius: 30px 30px 0 0;
+        height: 10rem;
+    }
+
+    .main-footer ul {
         text-align: center;
     }
 
     .main-footer ul li{
-        background-color: var(--color-rojo);
-        border: solid 3px var(--color-rojo);
+        background-color: #b92519;
+        border-right: 1px solid white;
         display: inline-block;
-        font-weight: bolder;
-        margin: 0;
-        padding: 4px;
-        padding-right: 10px;
-        
+        margin-bottom: 1px;
+        margin-top: 68px;
+        padding: 0px 10px;
+        text-transform: capitalize;
+        text-align: center;
     }
 
-    .main nav, ul .lista {
-        display: inline-block;
-        font-size: 12px;
-        width: 14.3%;
-        margin: 2.14px;
-    }
-    .main-footer ul li.border-white {
-        border-right-color: white;
+    .main-footer ul li:last-child{
+        border-right: none;
     }
 }
-
-/* nth-child */
